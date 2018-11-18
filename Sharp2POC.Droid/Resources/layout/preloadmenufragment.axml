@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <TextView
+                android:id="@+id/SQLSampleToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="#FFFFFF"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:text="Preload" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:id="@+id/sqlsample_container_linlay"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="56dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+         <LinearLayout
+      android:id="@+id/button_row"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:divider="@drawable/spacer_medium"
+      android:orientation="horizontal"
+      android:showDividers="middle"
+      >
+      <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+         MvxLang="Text C"/>
+
+      <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+      <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+      <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+      <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+      <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+            <MvxListView
+                android:id="@+id/menu_list"
+                android:scrollbars="vertical"
+                 android:choiceMode="singleChoice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               local:MvxBind="ItemsSource MenuItems; ItemClick NavigateToMenuItemCommand"
+                local:MvxItemTemplate="@layout/list_menu_item" />
+        
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
